@@ -93,7 +93,7 @@ export class OpenApiService {
       c++;
     }
     const headers = new Headers();
-    headers.append('X-Client', 'UniSat Wallet');
+    headers.append('X-Client', 'UniCash Wallet');
     headers.append('X-Version', VERSION);
     headers.append('x-address', this.clientAddress);
     headers.append('x-channel', CHANNEL);
@@ -106,7 +106,7 @@ export class OpenApiService {
   httpPost = async (route: string, params: any) => {
     const url = this.getHost() + route;
     const headers = new Headers();
-    headers.append('X-Client', 'UniSat Wallet');
+    headers.append('X-Client', 'UniCash Wallet');
     headers.append('X-Version', VERSION);
     headers.append('x-address', this.clientAddress);
     headers.append('x-channel', CHANNEL);

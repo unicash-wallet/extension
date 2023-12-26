@@ -6,7 +6,6 @@ import { SAFE_DOMAIN_CONFIRMATION, SUPPORTED_DOMAINS } from '@/shared/constant';
 import { getSatsName } from '@/shared/lib/satsname-utils';
 import { Inscription } from '@/shared/types';
 import { colors } from '@/ui/theme/colors';
-import { fontSizes } from '@/ui/theme/font';
 import { spacing } from '@/ui/theme/spacing';
 import { useWallet } from '@/ui/utils';
 
@@ -248,7 +247,7 @@ export const AddressInput = (props: InputProps) => {
     <div style={{ alignSelf: 'stretch' }}>
       <div style={Object.assign({}, $baseContainerStyle, { flexDirection: 'column', minHeight: '56.5px' })}>
         <input
-          placeholder={'Address or name (sats, unisat, ...) '}
+          placeholder={'Address or name (sats, unicash, ...) '}
           type={'text'}
           style={Object.assign({}, $baseInputStyle, $inputStyleOverride)}
           onChange={async (e) => {
@@ -279,7 +278,7 @@ export const AddressInput = (props: InputProps) => {
             color="yellow"
             text={'More details'}
             onClick={() => {
-              window.open(`https://docs.unisat.io/unisat-wallet/name-recognized-and-resolved`);
+              window.open('https://docs.unicash.io/unicash-wallet/name-recognized-and-resolved');
             }}
           />
           <Text preset="sub" size="sm" text={')'} />

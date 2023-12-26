@@ -1,11 +1,7 @@
-import { useState } from 'react';
-
 import { useNavigate } from '@/ui/pages/MainRoute';
 import { useReadTab, useUnreadAppSummary } from '@/ui/state/accounts/hooks';
-import { useSetTabCallback } from '@/ui/state/global/hooks';
 import { TabOption } from '@/ui/state/global/reducer';
 import { colors } from '@/ui/theme/colors';
-import { useWallet } from '@/ui/utils';
 
 import { BaseView } from '../BaseView';
 import { Column } from '../Column';
@@ -42,7 +38,8 @@ function TabButton({ tabName, icon, isActive }: { tabName: TabOption; icon: Icon
         } else if (tabName === 'settings') {
           navigate('SettingsTabScreen');
         }
-      }}>
+      }}
+    >
       <Icon icon={icon} color={isActive ? 'white' : 'white_muted'} />
       {tabName === 'app' && unreadApp && (
         <BaseView style={{ position: 'relative' }}>
@@ -55,7 +52,8 @@ function TabButton({ tabName, icon, isActive }: { tabName: TabOption; icon: Icon
               height: 5,
               backgroundColor: 'red',
               borderRadius: '50%'
-            }}></BaseView>
+            }}
+          ></BaseView>
         </BaseView>
       )}
     </Column>

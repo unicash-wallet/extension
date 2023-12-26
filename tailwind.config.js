@@ -1,10 +1,6 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  // purge: [
-  //   './src/**/*.html',
-  //   './src/**/*.js',
-  // ],
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
   theme: {
     extend: {
@@ -20,15 +16,15 @@ module.exports = {
       colors: {
         primary: 'rgb(234,202,68)',
         'primary-active': '#383535',
-        'hard-black': '#1C1919',
-        'soft-black': '#2A2626',
-        'soft-white': '#AAAAAA',
-        'custom-green': '#4BB21A',
+        'hard-black': '#1c1919',
+        'soft-black': '#2a2626',
+        'soft-white': '#aaaaaa',
+        'custom-green': '#4bb21a',
         'custom-green-rgba': 'rgba(75, 178, 26, 0.05)',
-        warn: '#FA701A',
-        warning: '#FA701A',
-        error: '#CC3333',
-        'dark-error': '#BB3333'
+        warn: '#fa701a',
+        warning: '#fa701a',
+        error: '#cc3333',
+        'dark-error': '#bb3333'
       },
       fontSize: {
         '4_5': '1.125rem',
@@ -130,7 +126,7 @@ module.exports = {
   },
   plugins: [
     // example: !bg-white ==> background: white !important;
-    plugin(function ({ addVariant }) {
+    plugin(function({ addVariant }) {
       addVariant('important', ({ container }) => {
         container.walkRules((rule) => {
           rule.selector = `.\\!${rule.selector.slice(1)}`;

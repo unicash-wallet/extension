@@ -23,7 +23,7 @@ var knownOptions = {
 var supported_envs = ['dev', 'pro'];
 var supported_browsers = ['chrome', 'firefox', 'edge', 'brave'];
 var supported_mvs = ['mv2', 'mv3'];
-var brandName = 'unisat';
+var brandName = 'unicash';
 var version = packageConfig.version;
 var validVersion = version.split('-beta')[0];
 var options = {
@@ -31,6 +31,7 @@ var options = {
   browser: knownOptions.default.browser,
   manifest: knownOptions.default.manifest
 };
+
 options = minimist(process.argv.slice(2), knownOptions);
 if (!supported_envs.includes(options.env)) {
   console.error(`not supported env: [${options.env}]. It should be one of ${supported_envs.join(', ')}.`);

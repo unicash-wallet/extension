@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { Inscription, RawTxInfo } from '@/shared/types';
-import { Button, Column, Content, Header, Input, Layout, Row, Text } from '@/ui/components';
+import { Button, Column, Content, Header, Layout, Row, Text } from '@/ui/components';
 import { FeeRateBar } from '@/ui/components/FeeRateBar';
 import InscriptionPreview from '@/ui/components/InscriptionPreview';
 import { OutputValueBar } from '@/ui/components/OutputValueBar';
 import { useCreateSplitTxCallback, useOrdinalsTx } from '@/ui/state/transactions/hooks';
-import { isValidAddress, useWallet } from '@/ui/utils';
+import { useWallet } from '@/ui/utils';
 
 import { useNavigate } from '../MainRoute';
 

@@ -1,4 +1,4 @@
-import { Checkbox, Dropdown, Radio } from 'antd';
+import { Checkbox, Radio } from 'antd';
 import { CheckboxChangeEvent } from 'antd/lib/checkbox';
 import * as bip39 from 'bip39';
 import bitcore from 'bitcore-lib';
@@ -9,14 +9,14 @@ import { ADDRESS_TYPES, OW_HD_PATH, RESTORE_WALLETS } from '@/shared/constant';
 import { AddressType, RestoreWalletType } from '@/shared/types';
 import { Button, Card, Column, Content, Grid, Header, Input, Layout, Row, Text } from '@/ui/components';
 import { useTools } from '@/ui/components/ActionComponent';
-import { AddressTypeCard, AddressTypeCard2 } from '@/ui/components/AddressTypeCard';
+import { AddressTypeCard2 } from '@/ui/components/AddressTypeCard';
 import { FooterButtonContainer } from '@/ui/components/FooterButtonContainer';
 import { Icon } from '@/ui/components/Icon';
 import { TabBar } from '@/ui/components/TabBar';
 import { useCreateAccountCallback } from '@/ui/state/global/hooks';
 import { fontSizes } from '@/ui/theme/font';
 import { amountToSatoshis, copyToClipboard, useWallet } from '@/ui/utils';
-import { CloseOutlined, LoadingOutlined } from '@ant-design/icons';
+import { LoadingOutlined } from '@ant-design/icons';
 
 import { useNavigate } from '../MainRoute';
 
@@ -37,7 +37,8 @@ function Step0({
             preset="default"
             onClick={() => {
               updateContextData({ tabType: TabType.STEP2, restoreWalletType: item.value });
-            }}>
+            }}
+          >
             <Text text={item.name} />
           </Button>
         );
@@ -101,7 +102,8 @@ function Step1_Create({
         justifyCenter
         onClick={(e) => {
           copy(contextData.mnemonics);
-        }}>
+        }}
+      >
         <Icon icon="copy" color="textDim" />
         <Text text="Copy to clipboard" color="textDim" />
       </Row>
@@ -238,7 +240,8 @@ function Step1_Import({
               updateContextData({ wordsType });
               setKeys(new Array(wordsItems[wordsType].count).fill(''));
             }}
-            value={contextData.wordsType}>
+            value={contextData.wordsType}
+          >
             {wordsItems.map((v) => (
               <Radio key={v.key} value={v.key}>
                 {v.label}

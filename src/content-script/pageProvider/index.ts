@@ -12,7 +12,7 @@ import { $, domReadyCall } from './utils';
 const log = (event, ...args) => {
   if (process.env.NODE_ENV !== 'production') {
     console.log(
-      `%c [unisat] (${new Date().toTimeString().slice(0, 8)}) ${event}`,
+      `%c [unicash] (${new Date().toTimeString().slice(0, 8)}) ${event}`,
       'font-weight: 600; background-color: #7d6ef9; color: white;',
       ...args
     );
@@ -312,23 +312,23 @@ export class UnisatProvider extends EventEmitter {
 
 declare global {
   interface Window {
-    unisat: UnisatProvider;
+    unicash: UnisatProvider;
   }
 }
 
 const provider = new UnisatProvider();
 
-if (!window.unisat) {
-  window.unisat = new Proxy(provider, {
+if (!window.unicash) {
+  window.unicash = new Proxy(provider, {
     deleteProperty: () => true
   });
 }
 
-Object.defineProperty(window, 'unisat', {
+Object.defineProperty(window, 'unicash', {
   value: new Proxy(provider, {
     deleteProperty: () => true
   }),
   writable: false
 });
 
-window.dispatchEvent(new Event('unisat#initialized'));
+window.dispatchEvent(new Event('unicash#initialized'));

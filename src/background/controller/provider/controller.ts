@@ -5,8 +5,8 @@ import { NETWORK_TYPES } from '@/shared/constant';
 import BaseController from '../base';
 import wallet from '../wallet';
 import { toPsbtNetwork } from '@/background/utils/tx-utils';
-import { AddressUserToSignInput, NetworkType, PublicKeyUserToSignInput, SignPsbtOptions, ToSignInput, UserToSignInput } from '@/shared/types';
-import { Psbt,Transaction,address as PsbtAddress  } from 'bitcoinjs-lib';
+import { NetworkType } from '@/shared/types';
+import { Psbt  } from 'bitcoinjs-lib';
 import { amountToSatoshis } from '@/ui/utils';
 import { ethErrors } from 'eth-rpc-errors';
 

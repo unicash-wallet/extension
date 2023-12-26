@@ -7,7 +7,6 @@ import { useTools } from '@/ui/components/ActionComponent';
 import { Button } from '@/ui/components/Button';
 import { Icon } from '@/ui/components/Icon';
 import { NavTabBar } from '@/ui/components/NavTabBar';
-import { WarningPopver } from '@/ui/components/WarningPopver';
 import { useExtensionIsInTab, useOpenExtensionInTab } from '@/ui/features/browser/tabs';
 import { getCurrentTab } from '@/ui/features/browser/tabs';
 import { useCurrentAccount } from '@/ui/state/accounts/hooks';
@@ -199,7 +198,8 @@ export default function SettingsTabScreen() {
                       return;
                     }
                     navigate(item.route);
-                  }}>
+                  }}
+                >
                   <Row full justifyBetween>
                     <Column justifyCenter>
                       <Text text={item.label || item.desc} preset="regular-bold" />

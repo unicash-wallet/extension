@@ -37,8 +37,7 @@ import {
   Account,
   SignPsbtOptions,
   AddressUserToSignInput,
-  PublicKeyUserToSignInput,
-  UserToSignInput
+  PublicKeyUserToSignInput
 } from '@/shared/types';
 import { createSendBTC, createSendMultiOrds, createSendOrd, createSplitOrdUtxoV2 } from '@unisat/ord-utils';
 

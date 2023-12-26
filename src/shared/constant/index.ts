@@ -167,7 +167,7 @@ export const OW_HD_PATH = "m/86'/0'/0'";
 export const RESTORE_WALLETS: { value: RestoreWalletType; name: string; addressTypes: AddressType[] }[] = [
   {
     value: RestoreWalletType.UNISAT,
-    name: 'UniSat Wallet',
+    name: 'UniCash Wallet',
     addressTypes: [
       AddressType.P2WPKH,
       AddressType.P2SH_P2WPKH,
@@ -226,10 +226,10 @@ export const WALLETCONNECT_STATUS_MAP = {
   FAILD: 6
 };
 
-export const INTERNAL_REQUEST_ORIGIN = 'https://unisat.io';
+export const INTERNAL_REQUEST_ORIGIN = 'https://unicash.io';
 
 export const INTERNAL_REQUEST_SESSION = {
-  name: 'UniSat Wallet',
+  name: 'UniCash Wallet',
   origin: INTERNAL_REQUEST_ORIGIN,
   icon: './images/logo/logo@128x.png'
 };
@@ -268,12 +268,12 @@ export const TO_LOCALE_STRING_CONFIG = {
   minimumFractionDigits: 8
 };
 
-export const SUPPORTED_DOMAINS = ['sats', 'unisat', 'x', 'btc'];
+export const SUPPORTED_DOMAINS = ['sats', 'unicash', 'x', 'btc'];
 export const SAFE_DOMAIN_CONFIRMATION = 3;
 
-export const GITHUB_URL = 'https://github.com/unisat-wallet/extension';
+export const GITHUB_URL = 'https://github.com/unicash-wallet/extension';
 export const DISCORD_URL = 'https://discord.com/invite/EMskB2sMz8';
-export const TWITTER_URL = 'https://twitter.com/unisat_wallet';
+export const TWITTER_URL = 'https://twitter.com/unicash_wallet';
 
 export const CHANNEL = process.env.channel!;
 export const VERSION = process.env.release!;

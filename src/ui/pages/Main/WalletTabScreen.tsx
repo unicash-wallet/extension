@@ -99,7 +99,8 @@ export default function WalletTabScreen() {
                 itemsCenter
                 onClick={() => {
                   navigate('ConnectedSitesScreen');
-                }}>
+                }}
+              >
                 <Text text="·" color="green" size="xxl" />
                 <Text text="Dapp Connected" size="xxs" />
               </Row>
@@ -111,7 +112,8 @@ export default function WalletTabScreen() {
             preset="style2"
             onClick={() => {
               navigate('SwitchKeyringScreen');
-            }}>
+            }}
+          >
             <Text text={currentKeyring.alianName} size="xxs" />
           </Card>
         }
@@ -139,7 +141,8 @@ export default function WalletTabScreen() {
             }
             overlayStyle={{
               fontSize: fontSizes.xs
-            }}>
+            }}
+          >
             <div>
               <Text text={balanceValue + '  BTC'} preset="title-bold" textCenter size="xxxl" />
             </div>
@@ -193,7 +196,8 @@ export default function WalletTabScreen() {
               itemsCenter
               onClick={() => {
                 window.open(`${blockstreamUrl}/address/${currentAccount.address}`);
-              }}>
+              }}
+            >
               <Text text={'View History'} size="xs" />
               <Icon icon="link" size={fontSizes.xs} />
             </Row>

@@ -5,7 +5,6 @@ import { ADDRESS_TYPES } from '@/shared/constant';
 import { WalletKeyring } from '@/shared/types';
 import { Button, Input, Layout, Content, Icon, Header, Text, Column, Row, Card, Grid } from '@/ui/components';
 import { useTools } from '@/ui/components/ActionComponent';
-import { useCurrentKeyring } from '@/ui/state/keyrings/hooks';
 import { copyToClipboard, useLocationState, useWallet } from '@/ui/utils';
 
 type Status = '' | 'error' | 'warning' | undefined;
@@ -126,7 +125,8 @@ export default function ExportMnemonicsScreen() {
               justifyCenter
               onClick={(e) => {
                 copy(mnemonic);
-              }}>
+              }}
+            >
               <Icon icon="copy" color="textDim" />
               <Text text="Copy to clipboard" color="textDim" />
             </Row>
